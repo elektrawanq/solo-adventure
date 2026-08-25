@@ -3,6 +3,8 @@ package src;
 public class Award {
     private final String description;
     private int energy;
+    private 
+    private int level;
 
     public Award(String description, int energy) {
         this.description = description;
