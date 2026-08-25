@@ -1,12 +1,11 @@
-package src;
+package src.Reward;
 
-public class Award {
+public class Reward {
     private final String description;
     private int energy;
-    private 
     private int level;
 
-    public Award(String description, int energy) {
+    public Reward(String description, int energy) {
         this.description = description;
         this.energy = energy;
     }

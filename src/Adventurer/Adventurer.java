@@ -1,4 +1,6 @@
-package src;
+package src.Adventurer;
+
+import src.Reward.Reward;
 
 public class Adventurer {
     private final String name;
@@ -12,5 +14,5 @@ public class Adventurer {
     public String getName() { return name; }
     public int getEnergy() { return energy; }
 
-    public void receiveEnergy(Award award) { energy += award.getEnergy(); }
+    public void receiveEnergy(Reward reward) { energy += reward.getEnergy(); }
 }

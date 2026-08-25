@@ -1,4 +1,4 @@
-package src;
+package src.Item;
 public enum ItemType {
     FOOD,
     WEAPON,
