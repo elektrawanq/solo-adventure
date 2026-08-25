@@ -6,7 +6,13 @@ public class Adventurer {
 
     public Adventurer(String name, int energy) {
         this.name = name;
-        this.energy = energy;
+
+        if (energy < 0) {
+            System.out.println("Error: energy cannot be negative. Setting to 0.");
+            this.energy = 0;
+        } else {
+            this.energy = energy;
+        }
     }
     
     public String getName() { return name; }

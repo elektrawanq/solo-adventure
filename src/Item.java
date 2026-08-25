@@ -13,7 +13,13 @@ public class Item {
         this.description = description;
         this.type = type;
         this.rarity = rarity;
-        this.level = level;
+
+        if (level <1 ) {
+            System.out.printl("Error: invalid level. Adjusted to 1");
+            this.level = 1;
+        } else {
+            this.level = level;
+        }
     }
 
     public String getDescription() { return description; }
