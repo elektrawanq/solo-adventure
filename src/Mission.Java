@@ -3,20 +3,29 @@ package src;
 public class Mission {
     private final String title;
     private final Reward reward;
-    private boolean completed;
+    private MissionState state;
 
     public Mission(String title, Reward reward) {
         this.title = title;
         this.reward = reward;
-        this.completed = false;
+        this.state = MissionState.NOT_STARTED;
     }
 
     public String getTitle() { return title; }
     public Reward getReward() { return reward; }
-    public boolean getCompleted() { return completed; } 
+    public MissionState getState() { return state; } 
     
+    public void start(){
+        this.state = MissionState.IN_PROGRESS;
+
+    }
+
     public Reward conclude() {
-        completed = true;
+        this.state = MissionState.COMPLETED;
         return reward;
+    }
+
+    public void fail(){
+        this.state = MissionState.FAILED;
     }
 }
