@@ -4,7 +4,6 @@ import src.Item.Item;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 public class Inventory {
     private List<Item> items;
@@ -15,7 +14,7 @@ public class Inventory {
 
     public void getItems() {
         if(items.isEmpty()){
-            System.out.println("O invetáro está vazio.\n");
+            System.out.println("O inventário está vazio.\n");
             return;
         }
 

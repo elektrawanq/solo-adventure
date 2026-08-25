@@ -2,19 +2,20 @@ package src.Reward;
 
 import src.Item.Item;
 
+import java.util.List;
+
 public class Reward {
     private final String description;
-    private Item item;
+    private List<Item> items; // todo: atualizar Mission para imprimir todos os nomes
     private int experience;
 
-
-    public Reward(String description, Item item, int experience) {
+    public Reward(String description, List<Item> items, int experience) {
         this.description = description;
-        this.item = item;
+        this.items = items;
         this.experience = experience;
     }
 
     public String getDescription() { return description; }
-    public Item getItem() { return item; }
+    public List<Item> getListItem() { return items; }
     public int getExperience() { return experience; }
 }

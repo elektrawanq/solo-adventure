@@ -1,7 +1,6 @@
 package src.Mission;
 
 import src.Adventurer.Adventurer;
-import src.MissionState;
 import src.Reward.Reward;
 
 public class Mission {
@@ -24,11 +23,14 @@ public class Mission {
 
     public void start(Adventurer adventurer) {
         if(state == MissionState.COMPLETED){
-            System.out.println("Essa missão já foi concluida e nao pode mais ser realizada!\n");
+            System.out.println("Essa missão já foi concluída e nao pode mais ser realizada!\n");
+            return;
         }
 
         if(adventurer.getLevel() < levelRequired){
-            System.out.println("O aventureiro ainda nao pode realizar esta missao, ainda precisa subir " + (levelRequired - adventurer.getLevel()) + " niveis para estar apto.\n");
+            int quantityLevelsMission = levelRequired - adventurer.getLevel();
+            System.out.println("O aventureiro ainda nao pode realizar esta missao, ainda precisa subir " + quantityLevelsMission + " niveis para estar apto.\n");
+            return;
         }
 
         this.state = MissionState.IN_PROGRESS;
@@ -38,7 +40,13 @@ public class Mission {
         this.state = MissionState.COMPLETED;
 
         //Diz qual recompensa a pessoa ganhou e abaixo quanto de experiencia a missao rendeu
-        System.out.println("Parabens, a missao foi concluida! Voce recebera um(a) " + reward.getItem().getName() + " como recompensa.\n" + "+ " + reward.getExperience() + "xp\n");
+        System.out.println("Parabens, a missao foi concluida! Voce recebera como recompensa:\n");
+        for(int i = 0; i < reward.getListItem().size(); i++) {
+            System.out.print((i+1) + ") ");
+            System.out.println(reward.getListItem().get(i) + "\n");
+        }
+            System.out.println("Experience: ");
+            System.out.println(reward.getExperience() + "xp\n");
         return reward;
     }
 
