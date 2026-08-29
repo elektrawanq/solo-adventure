@@ -8,12 +8,16 @@ public class Item {
     private int level;
 
     public Item(String name, String description, ItemType type, Rarity rarity) {
-        this("", type.toString(), type, rarity, 1); 
-    }
+        this.name = (name == null) ? "" : name;
+        this.description = (description == null) ? "" : description;
+        this.type = type;
+        this.rarity = rarity;
+        this.level = 1;
+    }   
 
     public Item(String name, String description, ItemType type, Rarity rarity, int level) {
-        this.name = name;
-        this.description = description;
+        this.name = (name == null) ? "" : name;
+        this.description = (description == null) ? "" : description;
         this.type = type;
         this.rarity = rarity;
         this.level = level;

@@ -15,19 +15,19 @@ public class Adventurer {
    // private Classe classe;
 
 
-    public Adventurer(String name, Inventory inventory) {
+    public Adventurer(String name) {
         this.name = name;
         this.experience = 0; //Experiencia incial de um aventureiro
         this.level = 1; //Nivel inicial de um aventureiro
-        this.inventory = inventory;
+        this.inventory = new Inventory(); //cria dentro do adventurer, assim se tornando composição
     }
 
     //Sobrecarga de construtor para o caso de ser necessario criar um personagem com um determinado nivel
-    public Adventurer(String name, int level, Inventory inventory) {
+    public Adventurer(String name, int level) {
         this.name = name;
         this.experience = 0; //Experiencia incial de um aventureiro
         this.level = level;
-        this.inventory = inventory;
+        this.inventory = new Inventory();
     }
     
     public String getName() {  return name; }
