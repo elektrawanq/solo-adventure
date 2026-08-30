@@ -33,6 +33,7 @@ public class Adventurer {
     public String getName() {  return name; }
     public int getExperience() { return experience; }
     public int getLevel() { return level; }
+    public Inventory getInventory() { return inventory; } //adicionei getInventory para poder mexer no inventário
 
 
     //Recebe a experiencia e o item de recompensa

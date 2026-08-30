@@ -19,7 +19,7 @@ public class Inventory {
         }
 
         for(int i = 0; i < items.size(); i++){
-            System.out.println((i+1) + ". " + items.get(i).getName() + "\n"); // "1. Nome do item"
+            System.out.println((i+1) + ". " + items.get(i).getName() + " | Raridade: " + items.get(i).getRarity() + " | Level: " + items.get(i).getLevel() + "\n"); // "1. Nome do item | Raridade: X | Level: Y"
         }
     }
 
