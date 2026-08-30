@@ -1,5 +1,7 @@
 package src;
 
+import java.util.Scanner;  
+
 import src.Adventurer.Adventurer;
 import src.Item.Item;
 import src.Item.ItemType;
@@ -14,7 +16,7 @@ public class Main {
     public static void main(String[] args) {
 
         System.out.println("========================================");
-        System.out.println("   INICIANDO A AVENTURA SOLO");
+        System.out.println("      INICIANDO A AVENTURA SOLO");
         System.out.println("========================================\n");
 
         // ---------------------------------------------------------------
@@ -22,6 +24,20 @@ public class Main {
         //    Composição: o Adventurer cria seu próprio Inventory internamente,
         //    ninguém de fora "empresta" um inventário pronto pra ele.
         // ---------------------------------------------------------------
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Diga o nome do herói: ");
+        String heroName = scanner.nextLine();
+
+        Adventurer hero = new Adventurer(heroName);
+
+        System.out.println("\n===================\n"
+            + "Herói criado: " + hero.getName() 
+            + "\nNível: " + hero.getLevel()
+            + "\nXP: " + hero.getExperience() 
+            + "\n===================" + "\n"
+        );
+
 
         // ---------------------------------------------------------------
         // 2) Criação de Itens

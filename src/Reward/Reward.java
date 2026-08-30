@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Reward {
     private final String description;
-    private List<Item> items; // todo: atualizar Mission para imprimir todos os nomes
+    private List<Item> items;
     private int experience;
 
     public Reward(String description, List<Item> items, int experience) {
