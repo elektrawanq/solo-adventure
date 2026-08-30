@@ -60,10 +60,10 @@ public class Adventurer {
         for(Item item : listItem) {
             inventory.addItem(item);
         }
-        System.out.println("Os itens:\n");
+        System.out.println("--------------------------------\n" + "Os itens:");
         for(Item item : listItem) {
-            System.out.println(item.getName() + "\n");
+            System.out.println("-> " + item.getName());
         }
-        System.out.println("foram adicionados ao inventario de " + name + " com sucesso!\n");
+        System.out.println("foram adicionados ao inventario de " + name + " com sucesso!\n" + "--------------------------------\n");
     } 
 }

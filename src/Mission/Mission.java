@@ -37,16 +37,21 @@ public class Mission {
     }
 
     public Reward conclude() {
+        if(state == MissionState.COMPLETED){
+            System.out.println("Essa missão já foi concluída!\n");
+            return null;
+        }
+        
         this.state = MissionState.COMPLETED;
 
         //Diz qual recompensa a pessoa ganhou e abaixo quanto de experiencia a missao rendeu
-        System.out.println("Parabens, a missao foi concluida! Você recebera como recompensa:\n");
+        System.out.println("==================================================================================\n" + "Parabens, a missao foi concluida! Você recebera como recompensa:\n");
         for(int i = 0; i < reward.getListItem().size(); i++) {
             System.out.print((i+1) + ") ");
-            System.out.println(reward.getListItem().get(i).getName() + "\n");
+            System.out.println(reward.getListItem().get(i).getName() + " | Descrição: " + reward.getListItem().get(i).getDescription() +  " | Raridade: " + reward.getListItem().get(i).getRarity() + " | Level: " + reward.getListItem().get(i).getLevel() + "\n");
         }
             System.out.println("Experience: ");
-            System.out.println(reward.getExperience() + "xp\n");
+            System.out.println(reward.getExperience() + "xp\n" + "==================================================================================\n");
         return reward;
     }
 
