@@ -4,7 +4,6 @@ import src.Inventory.Inventory;
 import src.Item.Item;
 import src.Reward.Reward;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Adventurer {

@@ -1,7 +1,6 @@
 package src.Reward;
 
 import src.Item.Item;
-
 import java.util.List;
 
 public class Reward {
