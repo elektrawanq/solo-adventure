@@ -54,10 +54,9 @@ public class Main {
         //criação de missão
         Mission firstMission = new Mission("Derrotar o Cogumelo Mutante da Floresta Sombria", firstMissionReward, 1);
 
-        //usa o aventureiro sem guardá-lo, logo associação
         System.out.println("Missão Disponível: " + firstMission.getTitle() + " | Level requirido: " + firstMission.getLevelRequired() + "\nStatus atual da missão: " + firstMission.getState() + "\n");
         System.out.println("Iniciando missão: " + firstMission.getTitle());
-        firstMission.start(hero);
+        firstMission.start(hero); //usa o aventureiro sem guardá-lo, logo associação
         System.out.println("Status da missão atual: " + firstMission.getState() + "\n");
 
         // ---------------------------------------------------------------

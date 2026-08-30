@@ -11,7 +11,7 @@ public class Adventurer {
     private int experience; // xp
     private int level;  // nível
     private Inventory inventory;
-   // private Classe classe;
+    //private Role role;
 
 
     public Adventurer(String name) {
