@@ -43,11 +43,11 @@ public class Main {
         hero.getInventory().getItems();
         System.out.print("----------------------\n\n");
 
-        //criação de itens para serem conquistados em missões
+        //criação de itens para serem conquistados em missões 
         Item potion = new Item("Poção de regeneração", "Poção que regenera vida", ItemType.POTION, Rarity.COMMON);
         Item armor = new Item("Capacete de ferro", "Capacete feita de 5 barras de ferro", ItemType.ARMOR, Rarity.RARE, 3);
 
-        //criação de lista de recompensas
+        //criação de lista de recompensas e exemplo de Agregação
         List<Item> firstMissionItems = new ArrayList<>();
         firstMissionItems.add(potion);
         firstMissionItems.add(armor);
